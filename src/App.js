@@ -1,13 +1,19 @@
 import React from "react";
+import Header from "./Header";
+import Body from "./Body";
 import "./App.css";
 
 function App() {
+
+  console.log('You see me every time React finishes with the DOM.')
+
   return (
     <div className="App">
+
       <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
+        <Header />
       </p>
+      <p><Body /></p>
     </div>
   );
 }
