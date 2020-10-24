@@ -2,19 +2,30 @@ import React from "react";
 import Header from "./Header";
 import Body from "./Body";
 import "./App.css";
+import styled from "styled-components"
 
 function App() {
 
   console.log('You see me every time React finishes with the DOM.')
 
-  return (
-    <div className="App">
+  const HTML = document.getElementsByTagName('html')
+  console.log(HTML)
 
-      <p>
+  const BGColor = styled.div`
+  background-color: black;
+  color: pink;
+`
+
+
+  return (
+    
+    <BGColor className="App">
+
+     
         <Header />
-      </p>
-      <p><Body /></p>
-    </div>
+      
+      <Body />
+    </BGColor>
   );
 }
 
