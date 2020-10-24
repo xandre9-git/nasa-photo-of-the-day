@@ -1,14 +1,31 @@
 import React from "react";
+import Header from "./Header";
+import Body from "./Body";
 import "./App.css";
+import styled from "styled-components"
 
 function App() {
+
+  console.log('You see me every time React finishes with the DOM.')
+
+  const HTML = document.getElementsByTagName('html')
+  console.log(HTML)
+
+  const BGColor = styled.div`
+  background-color: black;
+  color: pink;
+`
+
+
   return (
-    <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
-    </div>
+    
+    <BGColor className="App">
+
+     
+        <Header />
+      
+      <Body />
+    </BGColor>
   );
 }
 
